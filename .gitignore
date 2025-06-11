@@ -3,6 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Settings IDE 
+.vs/
+.vscode/
+.idea/
+
 # User-specific files
 *.rsuser
 *.suo
@@ -31,6 +36,11 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+*.dll
+*.exe
+*.cache
+
+
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -399,3 +409,17 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Files aseprite
+*.aseprite
+*.ase
+
+# Files Tmodloader 
+*.tmod
+/config.json
+/LaunchSettings.json
+
+# Tempgamefiles 
+Thumbs.db
+*.bak 
+*.swp
