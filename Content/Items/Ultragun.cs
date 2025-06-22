@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -8,8 +9,10 @@ namespace TurtleMod.Content.Items
     {
         public override void SetDefaults()
         {
-            Item.width = 32;
-            Item.height = 32;
+            Item.width = 64;
+            Item.height = 64;
+			Item.scale = 1.0f;
+            Item.noUseGraphic = false;
 
             Item.damage = 75;
             Item.knockBack = 2f;
@@ -52,5 +55,10 @@ namespace TurtleMod.Content.Items
 
   
         }
+		
+		public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(-5f, -1f);
+		}
     }
 }
