@@ -2,9 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TurtleMod.Items.Weapons
-{ 
-    public class UltraGun : ModItem
+namespace TurtleMod.Content.Items
+{
+    public class UltraGun : ModItem 
     {
         public override void SetDefaults()
         {
@@ -19,37 +19,38 @@ namespace TurtleMod.Items.Weapons
             Item.useAnimation = 25;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = false;
-
             Item.noMelee = true;
             Item.DamageType = DamageClass.Ranged;
+
+            Item.shoot = ProjectileID.Bullet;
+            Item.UseSound = SoundID.Item11;
             Item.value = Item.buyPrice(silver: 25);
             Item.rare = ItemRarityID.Blue;
 
-            Item.shoot = ProjectileID.Bullet;
-            Item.shootSpeed = 12f;
-
             Item.useAmmo = AmmoID.Bullet;
-            Item.UseSound = SoundID.Item11;
+            Item.shootSpeed = 12f;
+            
         }
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-
             if (WorldGen.SavedOreTiers.Gold == TileID.Gold)
-
-            recipe.AddIngredient(ItemID.GoldBar, 15);
+                recipe.AddIngredient(ItemID.GoldBar, 15);
             else
                 recipe.AddIngredient(ItemID.PlatinumBar, 15);
 
             if (WorldGen.crimson)
-
                 recipe.AddIngredient(ItemID.TheUndertaker);
             else
                 recipe.AddIngredient(ItemID.Musket);
 
+            recipe.AddIngredient(ItemID.Glass, 3);
+
             recipe.AddTile(TileID.Anvils);
+
             recipe.Register();
+
+  
         }
     }
 }
-   
