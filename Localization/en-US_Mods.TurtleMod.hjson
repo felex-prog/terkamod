@@ -15,4 +15,9 @@ Items: {
 		DisplayName: Rebellion
 		Tooltip: ""
 	}
+
+	UltraGun: {
+		DisplayName: Ultra Gun
+		Tooltip: ""
+	}
 }
