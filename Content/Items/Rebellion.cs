@@ -32,7 +32,7 @@ namespace TurtleMod.Content.Items
             recipe.AddIngredient(ItemID.SilverBar, 20);
             recipe.AddIngredient(ItemID.IronBar, 30);
             recipe.AddIngredient(ItemID.LargeRuby, 1);
-            recipe.AddIngredient(ItemID.LargeSaphyr, 1);
+            recipe.AddIngredient(ItemID.LargeSapphire, 1);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }
