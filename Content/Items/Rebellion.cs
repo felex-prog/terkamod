@@ -14,10 +14,10 @@ namespace TurtleMod.Content.Items
         {
             Item.damage = 120;
             Item.DamageType = DamageClass.Melee;
-            Item.width = 40;
-            Item.height = 40;
-            Item.useTime = 18;
-            Item.useAnimation = 18;
+            Item.width = 64;
+            Item.height = 64;
+            Item.useTime = 30;
+            Item.useAnimation = 30;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 4;
             Item.value = Item.buyPrice(gold: 5);
@@ -31,6 +31,8 @@ namespace TurtleMod.Content.Items
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.SilverBar, 20);
             recipe.AddIngredient(ItemID.IronBar, 30);
+            recipe.AddIngredient(ItemID.LargeRuby, 1);
+            recipe.AddIngredient(ItemID.LargeSaphyr, 1);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }
