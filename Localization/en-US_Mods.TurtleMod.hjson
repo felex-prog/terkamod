@@ -10,4 +10,14 @@ Items: {
 			It's snowing on Mt.Fuji
 			'''
 	}
+
+	Rebellion: {
+		DisplayName: Rebellion
+		Tooltip: ""
+	}
+
+	UltraGun: {
+		DisplayName: Ultra Gun
+		Tooltip: ""
+	}
 }
