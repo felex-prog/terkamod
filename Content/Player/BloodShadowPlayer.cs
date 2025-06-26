@@ -34,7 +34,7 @@ namespace TurtleMod.Players
             {
                 Player.immune = true;
                 Player.immuneTime = 2;
-                Player.invis = true;
+                Player.invis = false;
 
                 if (--AbilityTimer <= 0)
                  shadowActivate = false;

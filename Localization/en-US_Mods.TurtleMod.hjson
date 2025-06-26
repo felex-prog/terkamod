@@ -20,4 +20,21 @@ Items: {
 		DisplayName: Ultra Gun
 		Tooltip: ""
 	}
+
+	InfiniteBandana: {
+		DisplayName: Infinite Bandana
+		Tooltip: ""
+	}
+
+	FleshSword: {
+		DisplayName: Flesh Sword
+		Tooltip: ""
+	}
+}
+
+"Keybinds.Activation Blood Shadow.DisplayName": Activation  Blood  Shadow
+
+Projectiles: {
+	BloodShadow.DisplayName: Blood Shadow
+	FleshSwordProjectile.DisplayName: Flesh Sword Projectile
 }
