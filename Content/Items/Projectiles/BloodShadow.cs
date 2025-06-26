@@ -6,6 +6,7 @@ namespace TurtleMod.Content.Projectiles
 {
     public class BloodShadow : ModProjectile
     {
+		public override string Texture => "TurtleMod/Content/Items/Projectiles/BloodShadow";
         public override void SetDefaults()
         {
             Projectile.width = 80;
