@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using TurtleMod.Content.Projectiles;
+using TurtleMod.Content.GlobalItems;
 
 
 namespace TurtleMod.Content.Items
@@ -37,22 +38,7 @@ namespace TurtleMod.Content.Items
 
 
         }
-        public class BleedingFleshSword : GlobalItem
-        {
-            public float bleedChance = 0f;
-
-            public override void OnHitNPC(Item item, Player player, NPC target, NPC.HitInfo hit, int damageDone)
-            {
-
-                if (item.type == ModContent.ItemType<FleshSword>() && Main.rand.NextFloat() < bleedChance)
-                {
-                    target.AddBuff(BuffID.Bleeding, 25);
-                }
-            }
-            
-
         
-        }
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();

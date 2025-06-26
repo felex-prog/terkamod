@@ -6,7 +6,6 @@
 	<!-- General -->
 	<PropertyGroup>
 	  <Platforms>AnyCPU;x64</Platforms>
-	  <PlatformTarget>x64</PlatformTarget>
 	  <BaseOutputPath>C:\Users\User\Documents\My Games\Terraria\tModLoader\ModSources\TurtleMod\bin</BaseOutputPath>
 	</PropertyGroup>
 

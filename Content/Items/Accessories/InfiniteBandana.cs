@@ -34,7 +34,7 @@ namespace TurtleMod.Content.Items.Accessories
 
         public override void Load()
         {
-            HeadSlot = EquipLoader.AddEquipTexture(Mod, "TurtleMod/Content/Accessories/InfiniteBandana_Head", EquipType.Head, name:"InfiniteBandana_Head");
+            HeadSlot = EquipLoader.AddEquipTexture(Mod, "TurtleMod/Content/Items/Accessories/InfiniteBandana_Head", EquipType.Head, name:"InfiniteBandana_Head");
         }
 
         public override void SetStaticDefaults()
