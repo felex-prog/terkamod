@@ -32,7 +32,7 @@ namespace TurtleMod.Players
         {
            
             {
-                Player.immune = true;
+                Player.immune = false;
                 Player.immuneTime = 2;
                 Player.invis = false;
 

@@ -7,52 +7,31 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace TurtleMod.Content.Projectiles
 {
+	public override string Texture => "TurtleMod/Content/Items/Projectiles/FleshSwordProjectile";
     public class FleshSwordProjectile : ModProjectile
     {
-        public override string Texture => "TurtleMod/Content/Items/Projectiles/FleshSwordProjectile";
-
-        public override void SetStaticDefaults()
-        {
-            Main.projFrames[Projectile.type] = 6;
-            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 4;
-        }
         public override void SetDefaults()
         {
             Projectile.width = 22;
             Projectile.height = 22;
-            Projectile.friendly = true;
+            Projectile.friendly = false;
 
             Projectile.penetrate = -1;
             Projectile.timeLeft = 60;
             Projectile.tileCollide = false;
+			Projectile.ownerHitCheck = true;
+			Projectile.hide = true;
             
             
         }
 
         public override void AI()
         {
-            if (++Projectile.frameCounter >= 5)
-            {
-                Projectile.frameCounter = 0;
-                if (Projectile.frameCounter >= 6)
-                    Projectile.frame = 0;
-            }
-
-            if (Main.rand.NextBool(3))
-            {
-                Dust.NewDustPerfect(Projectile.Center, DustID.Blood, Vector2.Zero, 100, default, 1.5f);
-            }
+            Player player = Main.player[Projectile.owner];
+			Projectile.Center = player.Center + new Vector2(15 * player.direction,0);
         }
 
-        public override bool PreDraw(ref Color lightColor)
-        {
-            Texture2D tex = ModContent.Request<Texture2D>(Texture).Value;
-            Rectangle frame = new Rectangle(0, Projectile.frame * Projectile.height, Projectile.width, Projectile.height);
-            Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, frame, Color.Red * 0.8f, Projectile.rotation, new Vector2(Projectile.width / 2, Projectile.height / 2), Projectile.scale, SpriteEffects.None, 0);
-            
-            return false;
-
-        }
+        
 
     }
 }
